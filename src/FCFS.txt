@@ -1,0 +1,341 @@
+Clock cycle 1:
+ Running :
+ Processor 1: p1 //process 1 is run because only process in ready queue
+ Ready : none
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: In Memory //added to memory to be able to run
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 2:
+ Running :
+ Processor 1: p1 //process 1 is still chosen b/c there is no I/O interrupt and it hasn't completed
+ Ready : p2 p3 // p2 and p3 are added to ready queue
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: In Memory //still in memory b/c p1 is running
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 3:
+ Running :
+ Processor 1: p1 //still needs to run
+ Ready : p2 p3 p4 //p4 has been added to end of ready queue 
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: In Memory //still in memory b/c p1 is running
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 4:
+ Running :
+ Processor 1: p2 //p2 is chosen to run b/c p1 becomes blocked and p2 is at head of ready queue
+ Ready : p3 p4 
+ Blocked: 
+ B1: p1 //added to blocked queue
+
+ Memory: 
+p1: Not in Memory //taken out of memory because it is blocked
+p2: In Memory //put in memory becuase it is running
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 5:
+ Running :
+ Processor 1: p2 //process 1 is still chosen b/c there is no I/O interrupt and it hasn't completed
+ Ready : p3 p4 
+ Blocked: 
+ B1: p1 //still blocked
+
+ Memory: 
+p1: Not in Memory 
+p2: In Memory //still needs to run
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 6:
+ Running :
+ Processor 1: p2 //still needs to run
+ Ready : p3 p4 
+ Blocked: 
+ B1: p1 //last cycle blocked
+
+ Memory: 
+p1: Not in Memory 
+p2: In Memory //still needs to run
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 7:
+ Running :
+ Processor 1: p2 //still needs to run
+ Ready : p3 p4 p1 //p1 is added to back of ready queue after 2 cycles on blocked queue
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: Not in Memory 
+p2: In Memory /still needs to run
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 8:
+ Running :
+ Processor 1: p2 still needs to run
+ Ready : p3 p4 p1 
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: Not in Memory 
+p2: In Memory //still needs to run
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 9:
+ Running :
+ Processor 1: p2 //still needs to run
+ Ready : p3 p4 p1 
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: Not in Memory 
+p2: In Memory //still needs to run
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 10:
+ Running :
+ Processor 1: p3 //p3 is chosen because p2 has completed running and it is at head of ready queue
+ Ready : p4 p1 
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory //taken out of memory because it is completed
+p3: In Memory  //put in memory because it is being run
+p4: Not in Memory 
+
+Clock cycle 11:
+ Running :
+ Processor 1: p4 //p4 is choisen because it is the head of the ready queue and p3 was blocked
+ Ready : p1 
+ Blocked: 
+ B1: p3 //added to blocked queue because it is waiting for IO
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory //removed from memory because it was blocked
+p4: In Memory //added to memory because it is running
+
+Clock cycle 12:
+ Running :
+ Processor 1: p4 //still needs to run and not blocked by IO
+ Ready : p1 
+ Blocked: 
+ B1: p3 //still blocked by IO
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: In Memory //still needs to run
+
+Clock cycle 13:
+ Running :
+ Processor 1: p4 //still needs to run
+ Ready : p1 
+ Blocked: 
+ B1: p3 //still blocked
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: In Memory //still needs to run
+
+Clock cycle 14:
+ Running :
+ Processor 1: p4 //still needs to run
+ Ready : p1 p3 //no longer blocked and added to tail of ready queue
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: In Memory //still needs to run
+
+Clock cycle 15:
+ Running :
+ Processor 1: p1 //chosen to run becuase it is the head of the ready queue and p4 is blocked
+ Ready : p3 
+ Blocked: 
+ B1: p4 //added to blocked queue because waiting for IO
+
+ Memory: 
+p1: In Memory //added to memory because being run
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory //removed because blocked
+
+Clock cycle 16:
+ Running :
+ Processor 1: p1 //still needs to run and not blocked by IO
+ Ready : p3 
+ Blocked: 
+ B1: p4 //still blocked
+
+ Memory: 
+p1: In Memory //still needs to run
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 17:
+ Running :
+ Processor 1: p3 //chosen becuase head of ready queue and p1 was blocked
+ Ready : none
+ Blocked: 
+ B1: p4 p1 //p4 still blocked and p1 added to blocked queue waiting for IO
+
+ Memory: 
+p1: Not in Memory //removed from memory b/c blocked
+p2: Not in Memory 
+p3: In Memory //put in memory b/c running
+p4: Not in Memory 
+
+Clock cycle 18:
+ Running :
+ Processor 1: p3 /still needs to run and not blocked by IO
+ Ready : p4 //fininshed being blocked and added to tail of ready queue
+ Blocked: 
+ B1: p1 //still blocked
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: In Memory //still needs to run
+p4: Not in Memory 
+
+Clock cycle 19:
+ Running :
+ Processor 1: p3 //still needs to run
+ Ready : p4 
+ Blocked: 
+ B1: p1 //still blocked
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: In Memory //still needs to run
+p4: Not in Memory 
+
+Clock cycle 20:
+ Running :
+ Processor 1: p3 //still needs to run
+ Ready : p4 
+ Blocked: 
+ B1: p1 //still blocked
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: In Memory //still needs to run
+p4: Not in Memory 
+
+Clock cycle 21:
+ Running :
+ Processor 1: p4 //p4 is chosen becuase it is the head of the ready queue and p3 was blocked
+ Ready : p1 //added to tail of ready queue b/c it is finished being blocked
+ Blocked: 
+ B1: p3 added to blocked queue waiting for I/O
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory //removed from memory b/c blocked
+p4: In Memory //added to memory b/c running
+
+Clock cycle 22:
+ Running :
+ Processor 1: p4 //still needs to run and has not been blocked
+ Ready : p1 
+ Blocked: 
+ B1: p3 //still blocked
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: In Memory //still needs to run
+
+Clock cycle 23:
+ Running :
+ Processor 1: p4 //still needs to run
+ Ready : p1 
+ Blocked: 
+ B1: p3 //still blocked
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: In Memory //still needs to run
+
+Clock cycle 24:
+ Running :
+ Processor 1: p1 //chosen to run becuase it was head of ready queue and p4 has completed being run
+ Ready : p3 //added to tail of ready queue because no longer blocked
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: In Memory // added to memory becuase running
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory //removed from memory becuase finished running
+
+Clock cycle 25:
+ Running :
+ Processor 1: p1 //still needs to run
+ Ready : p3 
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: In Memory //still needs to run
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 26:
+ Running :
+ Processor 1: p3 //chosen to run becuase it was head of ready queue and p1 has completed being run
+ Ready : none
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: Not in Memory //removed from memory becuase finished running  
+p2: Not in Memory 
+p3: In Memory // added to memory becuase running
+p4: Not in Memory 
+
+
+00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 
+   p1 p1 p1 p2 p2 p2 p2 p2 p2 p3 p4 p4 p4 p4 p1 p1 p3 p3 p3 p3 p4 p4 p4 p1 p1 p3 

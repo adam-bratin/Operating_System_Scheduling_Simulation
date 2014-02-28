@@ -1,0 +1,380 @@
+Clock cycle 1:
+ Running :
+ Processor 1: p1
+ Ready : none
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: In Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 2:
+ Running :
+ Processor 1: p1
+ Ready : p2 p3 
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: In Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 3:
+ Running :
+ Processor 1: p2
+ Ready : p3 p4 
+ Blocked: 
+ B1: p1 
+
+ Memory: 
+p1: Not in Memory 
+p2: In Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 4:
+ Running :
+ Processor 1: p2
+ Ready : p3 p4 
+ Blocked: 
+ B1: p1 
+
+ Memory: 
+p1: Not in Memory 
+p2: In Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 5:
+ Running :
+ Processor 1: p2
+ Ready : p3 p4 
+ Blocked: 
+ B1: p1 
+
+ Memory: 
+p1: Not in Memory 
+p2: In Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 6:
+ Running :
+ Processor 1: p3
+ Ready : p4 p1 p2 
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: Not in Memory 
+p2: In Memory 
+p3: In Memory 
+p4: Not in Memory 
+
+Clock cycle 7:
+ Running :
+ Processor 1: p3
+ Ready : p4 p1 p2 
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: Not in Memory 
+p2: In Memory 
+p3: In Memory 
+p4: Not in Memory 
+
+Clock cycle 8:
+ Running :
+ Processor 1: p4
+ Ready : p1 p2 
+ Blocked: 
+ B1: p3 
+
+ Memory: 
+p1: Not in Memory 
+p2: In Memory 
+p3: Not in Memory 
+p4: In Memory 
+
+Clock cycle 9:
+ Running :
+ Processor 1: p1
+ Ready : p2 
+ Blocked: 
+ B1: p3 p4 
+
+ Memory: 
+p1: In Memory 
+p2: In Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 10:
+ Running :
+ Processor 1: p1
+ Ready : p2 
+ Blocked: 
+ B1: p3 p4 
+
+ Memory: 
+p1: In Memory 
+p2: In Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 11:
+ Running :
+ Processor 1: p1
+ Ready : p2 p3 
+ Blocked: 
+ B1: p4 
+
+ Memory: 
+p1: In Memory 
+p2: In Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 12:
+ Running :
+ Processor 1: p2
+ Ready : p3 
+ Blocked: 
+ B1: p4 
+
+ Memory: 
+p1: Not in Memory 
+p2: In Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 13:
+ Running :
+ Processor 1: p3
+ Ready : none
+ Blocked: 
+ B1: p4 
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: In Memory 
+p4: Not in Memory 
+
+Clock cycle 14:
+ Running :
+ Processor 1: p3
+ Ready : p4 
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: In Memory 
+p4: Not in Memory 
+
+Clock cycle 15:
+ Running :
+ Processor 1: p4
+ Ready : none
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: In Memory 
+
+Clock cycle 16:
+ Running :
+ Processor 1: none
+ Ready : none
+ Blocked: 
+ B1: p4 
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 17:
+ Running :
+ Processor 1: none
+ Ready : none
+ Blocked: 
+ B1: p4 
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 18:
+ Running :
+ Processor 1: none
+ Ready : none
+ Blocked: 
+ B1: p4 
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 19:
+ Running :
+ Processor 1: p4
+ Ready : none
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: In Memory 
+
+Clock cycle 20:
+ Running :
+ Processor 1: none
+ Ready : none
+ Blocked: 
+ B1: p4 
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 21:
+ Running :
+ Processor 1: p4
+ Ready : none
+ Blocked: 
+ B1: p4 
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: In Memory 
+
+Clock cycle 22:
+ Running :
+ Processor 1: none
+ Ready : none
+ Blocked: 
+ B1: p4 
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: In Memory 
+
+Clock cycle 23:
+ Running :
+ Processor 1: none
+ Ready : none
+ Blocked: 
+ B1: p4 
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 24:
+ Running :
+ Processor 1: none
+ Ready : none
+ Blocked: 
+ B1: p4 
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 25:
+ Running :
+ Processor 1: none
+ Ready : none
+ Blocked: 
+ B1: p4 
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 26:
+ Running :
+ Processor 1: none
+ Ready : none
+ Blocked: 
+ B1: p4 
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 27:
+ Running :
+ Processor 1: none
+ Ready : none
+ Blocked: 
+ B1: p4 
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 28:
+ Running :
+ Processor 1: none
+ Ready : none
+ Blocked: 
+ B1: p4 
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: Not in Memory 
+
+Clock cycle 29:
+ Running :
+ Processor 1: p4
+ Ready : none
+ Blocked: 
+ B1: none
+
+ Memory: 
+p1: Not in Memory 
+p2: Not in Memory 
+p3: Not in Memory 
+p4: In Memory 
+
+
+00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 
+   p1 p1 p2 p2 p2 p3 p3 p4 p1 p1 p1 p2 p3 p3 p4          p4    p4                      p4 
